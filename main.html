@@ -1,0 +1,24 @@
+
+<h1 id=titre>Les films en salle :</h1>
+<a>Page {{page}}/{{total_pages}}</a>
+<form ng-hide="total_pages == 1" name="pageForm" ng-controller="PageController">
+	Aller à la page :
+	<input type="number" ng-model="numeroPage">
+	<input type="submit" value="Go" ng-click="connect()">
+</form>
+<ul> 
+    <li ng-repeat="film in films">
+	    <div id=conteneur>
+	    	<hr>
+		    <img ng-src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{film.poster_path}}">
+		    <div id=resume>
+			    <h1>{{film.original_title}}</h1>
+			    <p><b>Resumé :</b> {{film.overview}}</p>
+			    <p><b>Date de sortie :</b> {{film.release_date}}</p>
+			    <p><b>note générale :</b> {{film.vote_average}}/10</p>
+		    </div>
+		    <hr>
+	    </div>
+	    <hr>
+    </li>
+</ul>

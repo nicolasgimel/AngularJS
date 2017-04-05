@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/style.css" />
+		<!--<link rel="stylesheet" href="style.css" />-->
+        <title>Projet Angular TheMovieDatabase</title>
+        <script type="text/javascript" src="lib/angular.min.js"></script>
+        <script type="text/javascript" src="lib/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/controller/BestController.js"></script>
+        <script type="text/javascript" src="js/controller/NextController.js"></script>
+        <script type="text/javascript" src="js/controller/MainController.js"></script>
+        <script type="text/javascript" src="js/controller/ActeurController.js"></script>
+        <script type="text/javascript" src="js/controller/SearchController.js"></script>
+        <script type="text/javascript" src="js/controller/PageController.js"></script>
+        <script type="text/javascript" src="js/service/MonService.js"></script>
+        <script type="text/javascript" src="js/app/app2.js"></script>
+    </head>
+
+    <body ng-app="MonApplication">
+        <p>ici le header</p>
+        <a href="#/">Actuellement</a>
+        <a href="#/next">Prochaine Sortie</a>
+        <a href="#/best">Meilleurs films</a>
+        <a href="#/acteur">Acteurs Populaires</a>
+        <br>
+        <form name="searchForm" ng-controller="SearchController">
+        Recherche :
+            <input type="text" ng-model="query">
+            <input type="submit" name="Valider" value="OK" ng-click="connect()">
+        </form>
+        <div ng-view></div>
+        <p>ici le footer</p>
+    </body>
+</html>

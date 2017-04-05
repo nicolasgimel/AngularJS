@@ -1,0 +1,21 @@
+
+<h1 id=titre>Liste des acteurs :</h1>
+<ul> 
+    <li ng-repeat="acteur in acteurs">
+	    <div id=conteneur>
+	    	<hr>
+		    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{acteur.profile_path}}">
+		    <div id="resume">
+		    	<h1>{{acteur.name}}</h1>
+			    <p><b>Connu pour avoir joué dans :</b></p>
+			    <ul>
+			    	<li>-{{acteur.known_for[0].title}}</li>
+			    	<li>-{{acteur.known_for[1].title}}</li>
+			    	<li>-{{acteur.known_for[2].title}}</li>
+			    </ul>
+			</div>
+		    <hr>
+	    </div>
+	    <hr>
+    </li>
+</ul>

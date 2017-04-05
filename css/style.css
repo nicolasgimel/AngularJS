@@ -1,0 +1,12 @@
+#conteneur
+{
+    display: flex;
+    padding: 10px;
+}
+#resume{
+	max-width: 500px;
+	padding: 100px;
+}
+ul{
+	list-style: none;
+}
